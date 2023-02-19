@@ -33,3 +33,4 @@ C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\Project_Youtube\Project_Youtube\o
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\Project_Youtube\Project_Youtube\obj\Debug\Project_Youtube.project.view.FrmMenuPrincipal.resources
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\Project_Youtube\Project_Youtube\obj\Debug\Project_Youtube.FrmUsuario.resources
 C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\Project_Youtube\Project_Youtube\obj\Debug\Project_Youtube.project.view.FrmLogin.resources
+C:\Users\cmdtj\OneDrive\Área de Trabalho\Apps\Project_Youtube\Project_Youtube\obj\Debug\Project_Youtube.project.view.FrmFornecedor.resources

@@ -84,6 +84,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="project.dao\FornecedorDAO.cs" />
+    <Compile Include="project.model\Fornecedor.cs" />
+    <Compile Include="project.view\FrmFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="project.view\FrmFornecedor.Designer.cs">
+      <DependentUpon>FrmFornecedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="project.view\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +115,9 @@
       <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="project.view\FrmFornecedor.resx">
+      <DependentUpon>FrmFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="project.view\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -184,6 +195,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\btn_home_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuCadastro_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fornecedor_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\produto_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\username_20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\senha_20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_Fornecedor_512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_Fornecedor_5121.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -19,6 +19,9 @@ namespace Project_Youtube.project.view
         {
             InitializeComponent();
             form1 = f;
+            this.Text = String.Empty;
+            this.ControlBox = false;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
         // Codigo para criar objeto e funcao de fechar a aplicacao

@@ -23,6 +23,9 @@ namespace Project_Youtube.project.view
             login.ShowDialog();
             CustomDesing();
             BtnFecharChildForm.Visible = false;
+            this.Text = String.Empty;
+            this.ControlBox = false;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -79,12 +82,15 @@ namespace Project_Youtube.project.view
         private void CustomDesing()
         {
             panelSubMenuLogin.Visible = false;
+            panelSubMenuCadastros.Visible = false;
         }
 
         private void HideSubMenu()
         {
             if (panelSubMenuLogin.Visible == true)
                 panelSubMenuLogin.Visible = false;
+            if (panelSubMenuCadastros.Visible == true)
+                panelSubMenuCadastros.Visible = false;
         }
 
         private void ShowSubMenu(Panel subMenu)
@@ -103,6 +109,11 @@ namespace Project_Youtube.project.view
         private void BtnLogin_Click(object sender, EventArgs e)
         {
             ShowSubMenu(panelSubMenuLogin);
+        }
+
+        private void BtnCadastros_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(panelSubMenuCadastros);
         }
 
         private void BtnFechar_Click(object sender, EventArgs e)
@@ -146,6 +157,27 @@ namespace Project_Youtube.project.view
             {
                 BtnFecharChildForm.Visible = true;
             }
+        }
+
+        private void BtnLogOff_Click(object sender, EventArgs e)
+        {
+            lblNivelAcesso.Text = "0";
+            lblUsuario.Text = "----";
+
+            Program.nivel = 0;
+            Program.logado = false;
+        }
+
+        private void BtnLogOn_Click(object sender, EventArgs e)
+        {
+            FrmLogin login = new FrmLogin(this);
+            login.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmFornecedor form = new FrmFornecedor();
+            AbreForm(1, form, sender);
         }
     }
 }

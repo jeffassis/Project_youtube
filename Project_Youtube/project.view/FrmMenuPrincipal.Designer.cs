@@ -40,23 +40,27 @@ namespace Project_Youtube.project.view
             this.lblUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelSubMenuLogin = new System.Windows.Forms.Panel();
+            this.BtnLogOff = new System.Windows.Forms.Button();
+            this.BtnLogOn = new System.Windows.Forms.Button();
+            this.BtnLogin = new System.Windows.Forms.Button();
+            this.BtnUsuario = new System.Windows.Forms.Button();
             this.Btn02 = new System.Windows.Forms.Button();
-            this.Btn01 = new System.Windows.Forms.Button();
+            this.panelSubMenuCadastros = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.BtnCadastros = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelTitle = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.panelDesktop = new System.Windows.Forms.Panel();
             this.BtnFecharChildForm = new System.Windows.Forms.Button();
             this.BtnFechar = new System.Windows.Forms.Button();
-            this.BtnLogin = new System.Windows.Forms.Button();
-            this.BtnLogOff = new System.Windows.Forms.Button();
-            this.btnLogOn = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.BtnUsuario = new System.Windows.Forms.Button();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.panelDesktop = new System.Windows.Forms.Panel();
             this.statusStrip1.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panelSubMenuLogin.SuspendLayout();
-            this.PanelTitle.SuspendLayout();
+            this.panelSubMenuCadastros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.PanelTitle.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -136,12 +140,14 @@ namespace Project_Youtube.project.view
             // 
             // panelMenu
             // 
-            this.panelMenu.Controls.Add(this.BtnLogin);
+            this.panelMenu.BackColor = System.Drawing.SystemColors.Control;
             this.panelMenu.Controls.Add(this.panelSubMenuLogin);
-            this.panelMenu.Controls.Add(this.pictureBox1);
+            this.panelMenu.Controls.Add(this.BtnLogin);
             this.panelMenu.Controls.Add(this.BtnUsuario);
             this.panelMenu.Controls.Add(this.Btn02);
-            this.panelMenu.Controls.Add(this.Btn01);
+            this.panelMenu.Controls.Add(this.panelSubMenuCadastros);
+            this.panelMenu.Controls.Add(this.BtnCadastros);
+            this.panelMenu.Controls.Add(this.pictureBox1);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
@@ -152,39 +158,169 @@ namespace Project_Youtube.project.view
             // panelSubMenuLogin
             // 
             this.panelSubMenuLogin.Controls.Add(this.BtnLogOff);
-            this.panelSubMenuLogin.Controls.Add(this.btnLogOn);
-            this.panelSubMenuLogin.Location = new System.Drawing.Point(0, 285);
+            this.panelSubMenuLogin.Controls.Add(this.BtnLogOn);
+            this.panelSubMenuLogin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubMenuLogin.Location = new System.Drawing.Point(0, 360);
             this.panelSubMenuLogin.Name = "panelSubMenuLogin";
             this.panelSubMenuLogin.Size = new System.Drawing.Size(150, 75);
-            this.panelSubMenuLogin.TabIndex = 4;
+            this.panelSubMenuLogin.TabIndex = 2;
+            // 
+            // BtnLogOff
+            // 
+            this.BtnLogOff.FlatAppearance.BorderSize = 0;
+            this.BtnLogOff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnLogOff.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLogOff.Image = global::Project_Youtube.Properties.Resources.logoff_24;
+            this.BtnLogOff.Location = new System.Drawing.Point(0, 35);
+            this.BtnLogOff.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnLogOff.Name = "BtnLogOff";
+            this.BtnLogOff.Size = new System.Drawing.Size(150, 35);
+            this.BtnLogOff.TabIndex = 3;
+            this.BtnLogOff.Text = "   LogOff";
+            this.BtnLogOff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnLogOff.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnLogOff.UseVisualStyleBackColor = true;
+            this.BtnLogOff.Click += new System.EventHandler(this.BtnLogOff_Click);
+            // 
+            // BtnLogOn
+            // 
+            this.BtnLogOn.FlatAppearance.BorderSize = 0;
+            this.BtnLogOn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnLogOn.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLogOn.Image = global::Project_Youtube.Properties.Resources.logon_24;
+            this.BtnLogOn.Location = new System.Drawing.Point(0, 0);
+            this.BtnLogOn.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnLogOn.Name = "BtnLogOn";
+            this.BtnLogOn.Size = new System.Drawing.Size(150, 35);
+            this.BtnLogOn.TabIndex = 2;
+            this.BtnLogOn.Text = "   LogOn";
+            this.BtnLogOn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnLogOn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnLogOn.UseVisualStyleBackColor = true;
+            this.BtnLogOn.Click += new System.EventHandler(this.BtnLogOn_Click);
+            // 
+            // BtnLogin
+            // 
+            this.BtnLogin.BackColor = System.Drawing.SystemColors.Control;
+            this.BtnLogin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnLogin.FlatAppearance.BorderSize = 0;
+            this.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnLogin.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLogin.Image = global::Project_Youtube.Properties.Resources.menuLogin_32;
+            this.BtnLogin.Location = new System.Drawing.Point(0, 305);
+            this.BtnLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnLogin.Name = "BtnLogin";
+            this.BtnLogin.Size = new System.Drawing.Size(150, 55);
+            this.BtnLogin.TabIndex = 5;
+            this.BtnLogin.Text = "   Login";
+            this.BtnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnLogin.UseVisualStyleBackColor = false;
+            this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
+            // 
+            // BtnUsuario
+            // 
+            this.BtnUsuario.BackColor = System.Drawing.SystemColors.Control;
+            this.BtnUsuario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnUsuario.FlatAppearance.BorderSize = 0;
+            this.BtnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnUsuario.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnUsuario.Image = global::Project_Youtube.Properties.Resources.menuUsuario_32;
+            this.BtnUsuario.Location = new System.Drawing.Point(0, 250);
+            this.BtnUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnUsuario.Name = "BtnUsuario";
+            this.BtnUsuario.Size = new System.Drawing.Size(150, 55);
+            this.BtnUsuario.TabIndex = 4;
+            this.BtnUsuario.Text = "   Usuário";
+            this.BtnUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnUsuario.UseVisualStyleBackColor = false;
+            this.BtnUsuario.Click += new System.EventHandler(this.BtnUsuario_Click);
             // 
             // Btn02
             // 
             this.Btn02.BackColor = System.Drawing.SystemColors.Control;
+            this.Btn02.Dock = System.Windows.Forms.DockStyle.Top;
             this.Btn02.FlatAppearance.BorderSize = 0;
             this.Btn02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn02.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn02.Location = new System.Drawing.Point(1, 120);
+            this.Btn02.Location = new System.Drawing.Point(0, 195);
             this.Btn02.Margin = new System.Windows.Forms.Padding(2);
             this.Btn02.Name = "Btn02";
             this.Btn02.Size = new System.Drawing.Size(150, 55);
-            this.Btn02.TabIndex = 1;
+            this.Btn02.TabIndex = 3;
             this.Btn02.Text = "Menu2";
             this.Btn02.UseVisualStyleBackColor = false;
             // 
-            // Btn01
+            // panelSubMenuCadastros
             // 
-            this.Btn01.BackColor = System.Drawing.SystemColors.Control;
-            this.Btn01.FlatAppearance.BorderSize = 0;
-            this.Btn01.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn01.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn01.Location = new System.Drawing.Point(1, 65);
-            this.Btn01.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn01.Name = "Btn01";
-            this.Btn01.Size = new System.Drawing.Size(150, 55);
-            this.Btn01.TabIndex = 0;
-            this.Btn01.Text = "Menu1";
-            this.Btn01.UseVisualStyleBackColor = false;
+            this.panelSubMenuCadastros.Controls.Add(this.button1);
+            this.panelSubMenuCadastros.Controls.Add(this.button2);
+            this.panelSubMenuCadastros.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubMenuCadastros.Location = new System.Drawing.Point(0, 120);
+            this.panelSubMenuCadastros.Name = "panelSubMenuCadastros";
+            this.panelSubMenuCadastros.Size = new System.Drawing.Size(150, 75);
+            this.panelSubMenuCadastros.TabIndex = 6;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::Project_Youtube.Properties.Resources.produto_24;
+            this.button1.Location = new System.Drawing.Point(0, 35);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 35);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "   Produto     ";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = global::Project_Youtube.Properties.Resources.fornecedor_24;
+            this.button2.Location = new System.Drawing.Point(0, 0);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(150, 35);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "   Fornecedor";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // BtnCadastros
+            // 
+            this.BtnCadastros.BackColor = System.Drawing.SystemColors.Control;
+            this.BtnCadastros.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnCadastros.FlatAppearance.BorderSize = 0;
+            this.BtnCadastros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCadastros.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCadastros.Image = global::Project_Youtube.Properties.Resources.menuCadastro_32;
+            this.BtnCadastros.Location = new System.Drawing.Point(0, 65);
+            this.BtnCadastros.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnCadastros.Name = "BtnCadastros";
+            this.BtnCadastros.Size = new System.Drawing.Size(150, 55);
+            this.BtnCadastros.TabIndex = 1;
+            this.BtnCadastros.Text = "   Cadastros";
+            this.BtnCadastros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnCadastros.UseVisualStyleBackColor = false;
+            this.BtnCadastros.Click += new System.EventHandler(this.BtnCadastros_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.DarkViolet;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(150, 65);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // PanelTitle
             // 
@@ -199,28 +335,6 @@ namespace Project_Youtube.project.view
             this.PanelTitle.Size = new System.Drawing.Size(810, 65);
             this.PanelTitle.TabIndex = 2;
             this.PanelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelTitle_MouseDown);
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Calisto MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(282, 20);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(78, 24);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "HOME";
-            // 
-            // panelDesktop
-            // 
-            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Font = new System.Drawing.Font("Calisto MT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelDesktop.Location = new System.Drawing.Point(150, 0);
-            this.panelDesktop.Margin = new System.Windows.Forms.Padding(2);
-            this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(810, 577);
-            this.panelDesktop.TabIndex = 3;
             // 
             // BtnFecharChildForm
             // 
@@ -255,84 +369,27 @@ namespace Project_Youtube.project.view
             this.BtnFechar.UseVisualStyleBackColor = true;
             this.BtnFechar.Click += new System.EventHandler(this.BtnFechar_Click);
             // 
-            // BtnLogin
+            // lblTitle
             // 
-            this.BtnLogin.BackColor = System.Drawing.SystemColors.Control;
-            this.BtnLogin.FlatAppearance.BorderSize = 0;
-            this.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnLogin.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLogin.Image = global::Project_Youtube.Properties.Resources.menuLogin_32;
-            this.BtnLogin.Location = new System.Drawing.Point(0, 230);
-            this.BtnLogin.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnLogin.Name = "BtnLogin";
-            this.BtnLogin.Size = new System.Drawing.Size(150, 55);
-            this.BtnLogin.TabIndex = 5;
-            this.BtnLogin.Text = "   Login";
-            this.BtnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnLogin.UseVisualStyleBackColor = false;
-            this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Calisto MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(282, 20);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(78, 24);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "HOME";
             // 
-            // BtnLogOff
+            // panelDesktop
             // 
-            this.BtnLogOff.FlatAppearance.BorderSize = 0;
-            this.BtnLogOff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnLogOff.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLogOff.Image = global::Project_Youtube.Properties.Resources.logoff_24;
-            this.BtnLogOff.Location = new System.Drawing.Point(0, 35);
-            this.BtnLogOff.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnLogOff.Name = "BtnLogOff";
-            this.BtnLogOff.Size = new System.Drawing.Size(150, 35);
-            this.BtnLogOff.TabIndex = 3;
-            this.BtnLogOff.Text = "   LogOff";
-            this.BtnLogOff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnLogOff.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnLogOff.UseVisualStyleBackColor = true;
-            // 
-            // btnLogOn
-            // 
-            this.btnLogOn.FlatAppearance.BorderSize = 0;
-            this.btnLogOn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogOn.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOn.Image = global::Project_Youtube.Properties.Resources.logon_24;
-            this.btnLogOn.Location = new System.Drawing.Point(0, 0);
-            this.btnLogOn.Margin = new System.Windows.Forms.Padding(2);
-            this.btnLogOn.Name = "btnLogOn";
-            this.btnLogOn.Size = new System.Drawing.Size(150, 35);
-            this.btnLogOn.TabIndex = 2;
-            this.btnLogOn.Text = "   LogOn";
-            this.btnLogOn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogOn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLogOn.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.DarkViolet;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 65);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // BtnUsuario
-            // 
-            this.BtnUsuario.BackColor = System.Drawing.SystemColors.Control;
-            this.BtnUsuario.FlatAppearance.BorderSize = 0;
-            this.BtnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnUsuario.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnUsuario.Image = global::Project_Youtube.Properties.Resources.menuUsuario_32;
-            this.BtnUsuario.Location = new System.Drawing.Point(0, 175);
-            this.BtnUsuario.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnUsuario.Name = "BtnUsuario";
-            this.BtnUsuario.Size = new System.Drawing.Size(150, 55);
-            this.BtnUsuario.TabIndex = 2;
-            this.BtnUsuario.Text = "   Usuário";
-            this.BtnUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnUsuario.UseVisualStyleBackColor = false;
-            this.BtnUsuario.Click += new System.EventHandler(this.BtnUsuario_Click);
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.Font = new System.Drawing.Font("Calisto MT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelDesktop.Location = new System.Drawing.Point(150, 0);
+            this.panelDesktop.Margin = new System.Windows.Forms.Padding(2);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(810, 577);
+            this.panelDesktop.TabIndex = 3;
             // 
             // FrmMenuPrincipal
             // 
@@ -346,7 +403,7 @@ namespace Project_Youtube.project.view
             this.Controls.Add(this.statusStrip1);
             this.Font = new System.Drawing.Font("Calisto MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.DarkViolet;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FrmMenuPrincipal";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -356,9 +413,10 @@ namespace Project_Youtube.project.view
             this.statusStrip1.PerformLayout();
             this.panelMenu.ResumeLayout(false);
             this.panelSubMenuLogin.ResumeLayout(false);
+            this.panelSubMenuCadastros.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.PanelTitle.ResumeLayout(false);
             this.PanelTitle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -376,7 +434,7 @@ namespace Project_Youtube.project.view
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel PanelTitle;
         private System.Windows.Forms.Panel panelDesktop;
-        private System.Windows.Forms.Button Btn01;
+        private System.Windows.Forms.Button BtnCadastros;
         private System.Windows.Forms.Button Btn02;
         private System.Windows.Forms.Button BtnUsuario;
         private System.Windows.Forms.Label lblTitle;
@@ -385,9 +443,12 @@ namespace Project_Youtube.project.view
         private System.Windows.Forms.Button BtnFechar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelSubMenuLogin;
-        private System.Windows.Forms.Button btnLogOn;
+        private System.Windows.Forms.Button BtnLogOn;
         private System.Windows.Forms.Button BtnLogOff;
         private System.Windows.Forms.Button BtnLogin;
         private System.Windows.Forms.Button BtnFecharChildForm;
+        private System.Windows.Forms.Panel panelSubMenuCadastros;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
