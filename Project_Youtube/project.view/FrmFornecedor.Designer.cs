@@ -1,17 +1,17 @@
 ﻿
-namespace Project_Youtube
+namespace Project_Youtube.project.view
 {
-    partial class FrmUsuario
+    partial class FrmFornecedor
     {
         /// <summary>
-        /// Variável de designer necessária.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Limpar os recursos que estão sendo usados.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true se for necessário descartar os recursos gerenciados; caso contrário, false.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -21,38 +21,26 @@ namespace Project_Youtube
             base.Dispose(disposing);
         }
 
-        #region Código gerado pelo Windows Form Designer
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Método necessário para suporte ao Designer - não modifique 
-        /// o conteúdo deste método com o editor de código.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.tabUsuario = new System.Windows.Forms.TabControl();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.tabFornecedor = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.TxtPesquisar = new System.Windows.Forms.TextBox();
             this.Grid = new System.Windows.Forms.DataGridView();
-            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNivel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSenha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.txtNivel = new System.Windows.Forms.NumericUpDown();
-            this.CbStatus = new System.Windows.Forms.ComboBox();
-            this.txtSenha = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnNovo = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -60,25 +48,24 @@ namespace Project_Youtube
             this.BtnExcluir = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnSalvar = new System.Windows.Forms.Button();
-            this.tabUsuario.SuspendLayout();
+            this.tabFornecedor.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNivel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabUsuario
+            // tabFornecedor
             // 
-            this.tabUsuario.Controls.Add(this.tabPage1);
-            this.tabUsuario.Controls.Add(this.tabPage2);
-            this.tabUsuario.Font = new System.Drawing.Font("Calisto MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabUsuario.Location = new System.Drawing.Point(5, 82);
-            this.tabUsuario.Name = "tabUsuario";
-            this.tabUsuario.SelectedIndex = 0;
-            this.tabUsuario.Size = new System.Drawing.Size(665, 385);
-            this.tabUsuario.TabIndex = 1;
+            this.tabFornecedor.Controls.Add(this.tabPage1);
+            this.tabFornecedor.Controls.Add(this.tabPage2);
+            this.tabFornecedor.Font = new System.Drawing.Font("Calisto MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabFornecedor.Location = new System.Drawing.Point(10, 70);
+            this.tabFornecedor.Name = "tabFornecedor";
+            this.tabFornecedor.SelectedIndex = 0;
+            this.tabFornecedor.Size = new System.Drawing.Size(665, 385);
+            this.tabFornecedor.TabIndex = 2;
             // 
             // tabPage1
             // 
@@ -102,99 +89,39 @@ namespace Project_Youtube
             this.TxtPesquisar.Name = "TxtPesquisar";
             this.TxtPesquisar.Size = new System.Drawing.Size(224, 25);
             this.TxtPesquisar.TabIndex = 2;
-            this.TxtPesquisar.TextChanged += new System.EventHandler(this.TxtPesquisar_TextChanged);
             // 
             // Grid
             // 
             this.Grid.AllowUserToAddRows = false;
             this.Grid.AllowUserToDeleteRows = false;
+            this.Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Grid.BackgroundColor = System.Drawing.Color.White;
             this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colId,
-            this.colNome,
-            this.colUsername,
-            this.colStatus,
-            this.colNivel,
-            this.colSenha});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkViolet;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Grid.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkViolet;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Grid.DefaultCellStyle = dataGridViewCellStyle1;
             this.Grid.Location = new System.Drawing.Point(15, 70);
             this.Grid.Name = "Grid";
             this.Grid.ReadOnly = true;
             this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Grid.Size = new System.Drawing.Size(626, 266);
             this.Grid.TabIndex = 0;
-            this.Grid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellDoubleClick);
-            // 
-            // colId
-            // 
-            this.colId.DataPropertyName = "Id_user";
-            this.colId.HeaderText = "#";
-            this.colId.Name = "colId";
-            this.colId.ReadOnly = true;
-            this.colId.Width = 55;
-            // 
-            // colNome
-            // 
-            this.colNome.DataPropertyName = "nome";
-            this.colNome.HeaderText = "NOME";
-            this.colNome.Name = "colNome";
-            this.colNome.ReadOnly = true;
-            this.colNome.Width = 260;
-            // 
-            // colUsername
-            // 
-            this.colUsername.DataPropertyName = "username";
-            this.colUsername.HeaderText = "USERNAME";
-            this.colUsername.Name = "colUsername";
-            this.colUsername.ReadOnly = true;
-            this.colUsername.Width = 160;
-            // 
-            // colStatus
-            // 
-            this.colStatus.DataPropertyName = "status";
-            this.colStatus.HeaderText = "STATUS";
-            this.colStatus.Name = "colStatus";
-            this.colStatus.ReadOnly = true;
-            this.colStatus.Width = 125;
-            // 
-            // colNivel
-            // 
-            this.colNivel.DataPropertyName = "nivel";
-            this.colNivel.HeaderText = "NIVEL";
-            this.colNivel.Name = "colNivel";
-            this.colNivel.ReadOnly = true;
-            this.colNivel.Width = 80;
-            // 
-            // colSenha
-            // 
-            this.colSenha.DataPropertyName = "senha";
-            this.colSenha.HeaderText = "SENHA";
-            this.colSenha.Name = "colSenha";
-            this.colSenha.ReadOnly = true;
-            this.colSenha.Visible = false;
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.txtTelefone);
+            this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.pictureBox2);
             this.tabPage2.Controls.Add(this.BtnCancelar);
             this.tabPage2.Controls.Add(this.BtnExcluir);
             this.tabPage2.Controls.Add(this.BtnEditar);
             this.tabPage2.Controls.Add(this.BtnSalvar);
-            this.tabPage2.Controls.Add(this.txtNivel);
-            this.tabPage2.Controls.Add(this.CbStatus);
-            this.tabPage2.Controls.Add(this.txtSenha);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.txtUsername);
+            this.tabPage2.Controls.Add(this.txtEndereco);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.txtNome);
             this.tabPage2.Controls.Add(this.label2);
@@ -208,98 +135,32 @@ namespace Project_Youtube
             this.tabPage2.Text = "Dados Pessoais";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // txtNivel
+            // txtEndereco
             // 
-            this.txtNivel.Enabled = false;
-            this.txtNivel.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNivel.Location = new System.Drawing.Point(324, 159);
-            this.txtNivel.Maximum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.txtNivel.Name = "txtNivel";
-            this.txtNivel.Size = new System.Drawing.Size(142, 26);
-            this.txtNivel.TabIndex = 5;
-            // 
-            // CbStatus
-            // 
-            this.CbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CbStatus.Enabled = false;
-            this.CbStatus.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CbStatus.FormattingEnabled = true;
-            this.CbStatus.Items.AddRange(new object[] {
-            "ATIVO",
-            "BLOQUEADO"});
-            this.CbStatus.Location = new System.Drawing.Point(105, 156);
-            this.CbStatus.Name = "CbStatus";
-            this.CbStatus.Size = new System.Drawing.Size(145, 27);
-            this.CbStatus.TabIndex = 4;
-            // 
-            // txtSenha
-            // 
-            this.txtSenha.Enabled = false;
-            this.txtSenha.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(324, 97);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.PasswordChar = '*';
-            this.txtSenha.Size = new System.Drawing.Size(142, 26);
-            this.txtSenha.TabIndex = 3;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(38, 161);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 19);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Status.:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(266, 161);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 19);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Nivel.:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(261, 100);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 19);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Senha.:";
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Enabled = false;
-            this.txtUsername.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(105, 97);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(145, 26);
-            this.txtUsername.TabIndex = 2;
+            this.txtEndereco.Enabled = false;
+            this.txtEndereco.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEndereco.Location = new System.Drawing.Point(105, 154);
+            this.txtEndereco.MaxLength = 250;
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(361, 26);
+            this.txtEndereco.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(10, 100);
+            this.label3.Location = new System.Drawing.Point(21, 99);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 19);
+            this.label3.Size = new System.Drawing.Size(78, 19);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Username.:";
+            this.label3.Text = "Telefone.:";
             // 
             // txtNome
             // 
             this.txtNome.Enabled = false;
             this.txtNome.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(105, 46);
+            this.txtNome.MaxLength = 100;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(361, 26);
             this.txtNome.TabIndex = 1;
@@ -314,6 +175,24 @@ namespace Project_Youtube
             this.label2.TabIndex = 0;
             this.label2.Text = "Nome.:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 157);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 19);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Endereço.:";
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Location = new System.Drawing.Point(105, 96);
+            this.txtTelefone.Mask = "(##) # ####-####";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(128, 26);
+            this.txtTelefone.TabIndex = 2;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -324,7 +203,6 @@ namespace Project_Youtube
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox1, "Pesquisar");
             // 
             // BtnNovo
             // 
@@ -341,16 +219,16 @@ namespace Project_Youtube
             this.BtnNovo.TabIndex = 1;
             this.BtnNovo.Text = "  Novo";
             this.BtnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.BtnNovo, "Novo registro");
             this.BtnNovo.UseVisualStyleBackColor = false;
             this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Project_Youtube.Properties.Resources.icone_usuario_128;
+            this.pictureBox2.Image = global::Project_Youtube.Properties.Resources.logo_Fornecedor_5121;
             this.pictureBox2.Location = new System.Drawing.Point(497, 49);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(125, 131);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             // 
@@ -366,7 +244,6 @@ namespace Project_Youtube
             this.BtnCancelar.TabIndex = 8;
             this.BtnCancelar.Text = "  Cancelar";
             this.BtnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.BtnCancelar, "Remover dados");
             this.BtnCancelar.UseVisualStyleBackColor = false;
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
@@ -383,9 +260,7 @@ namespace Project_Youtube
             this.BtnExcluir.TabIndex = 7;
             this.BtnExcluir.Text = "   Excluir";
             this.BtnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.BtnExcluir, "Remover dados");
             this.BtnExcluir.UseVisualStyleBackColor = false;
-            this.BtnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
             // 
             // BtnEditar
             // 
@@ -400,9 +275,7 @@ namespace Project_Youtube
             this.BtnEditar.TabIndex = 7;
             this.BtnEditar.Text = "   Editar";
             this.BtnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.BtnEditar, "Editar dados");
             this.BtnEditar.UseVisualStyleBackColor = false;
-            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // BtnSalvar
             // 
@@ -417,30 +290,25 @@ namespace Project_Youtube
             this.BtnSalvar.TabIndex = 6;
             this.BtnSalvar.Text = "   Salvar";
             this.BtnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.BtnSalvar, "Salvar dados");
             this.BtnSalvar.UseVisualStyleBackColor = false;
             this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
-            // FrmUsuario
+            // FrmFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 470);
-            this.Controls.Add(this.tabUsuario);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "FrmUsuario";
+            this.ClientSize = new System.Drawing.Size(684, 461);
+            this.Controls.Add(this.tabFornecedor);
+            this.Name = "FrmFornecedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "GESTÃO DE USUÁRIO";
-            this.Load += new System.EventHandler(this.FrmUsuario_Load);
-            this.tabUsuario.ResumeLayout(false);
+            this.Text = "Cadastro de Fornecedor";
+            this.Load += new System.EventHandler(this.FrmFornecedor_Load);
+            this.tabFornecedor.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNivel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -448,35 +316,24 @@ namespace Project_Youtube
         }
 
         #endregion
-        private System.Windows.Forms.TabControl tabUsuario;
+
+        private System.Windows.Forms.TabControl tabFornecedor;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox TxtPesquisar;
         private System.Windows.Forms.Button BtnNovo;
         private System.Windows.Forms.DataGridView Grid;
-        private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown txtNivel;
-        private System.Windows.Forms.ComboBox CbStatus;
-        private System.Windows.Forms.TextBox txtSenha;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Button BtnExcluir;
         private System.Windows.Forms.Button BtnEditar;
         private System.Windows.Forms.Button BtnSalvar;
-        private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Button BtnCancelar;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colUsername;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colStatus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNivel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colSenha;
+        private System.Windows.Forms.TextBox txtEndereco;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MaskedTextBox txtTelefone;
     }
 }
-

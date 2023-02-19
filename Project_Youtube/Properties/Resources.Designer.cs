@@ -133,6 +133,16 @@ namespace Project_Youtube.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fornecedor_24 {
+            get {
+                object obj = ResourceManager.GetObject("fornecedor_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icone_usuario_128 {
             get {
                 object obj = ResourceManager.GetObject("icone_usuario_128", resourceCulture);
@@ -153,6 +163,26 @@ namespace Project_Youtube.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo_Fornecedor_512 {
+            get {
+                object obj = ResourceManager.GetObject("logo_Fornecedor_512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_Fornecedor_5121 {
+            get {
+                object obj = ResourceManager.GetObject("logo_Fornecedor_5121", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logoff_24 {
             get {
                 object obj = ResourceManager.GetObject("logoff_24", resourceCulture);
@@ -166,6 +196,16 @@ namespace Project_Youtube.Properties {
         internal static System.Drawing.Bitmap logon_24 {
             get {
                 object obj = ResourceManager.GetObject("logon_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menuCadastro_32 {
+            get {
+                object obj = ResourceManager.GetObject("menuCadastro_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -196,6 +236,36 @@ namespace Project_Youtube.Properties {
         internal static System.Drawing.Bitmap pesquisar_20 {
             get {
                 object obj = ResourceManager.GetObject("pesquisar_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap produto_24 {
+            get {
+                object obj = ResourceManager.GetObject("produto_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap senha_20 {
+            get {
+                object obj = ResourceManager.GetObject("senha_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap username_20 {
+            get {
+                object obj = ResourceManager.GetObject("username_20", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
