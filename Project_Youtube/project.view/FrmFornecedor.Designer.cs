@@ -29,18 +29,20 @@ namespace Project_Youtube.project.view
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabFornecedor = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.TxtPesquisar = new System.Windows.Forms.TextBox();
             this.Grid = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.BtnRefresh = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnNovo = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -48,6 +50,7 @@ namespace Project_Youtube.project.view
             this.BtnExcluir = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnSalvar = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabFornecedor.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
@@ -69,6 +72,7 @@ namespace Project_Youtube.project.view
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.BtnRefresh);
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.TxtPesquisar);
             this.tabPage1.Controls.Add(this.BtnNovo);
@@ -89,6 +93,7 @@ namespace Project_Youtube.project.view
             this.TxtPesquisar.Name = "TxtPesquisar";
             this.TxtPesquisar.Size = new System.Drawing.Size(224, 25);
             this.TxtPesquisar.TabIndex = 2;
+            this.TxtPesquisar.TextChanged += new System.EventHandler(this.TxtPesquisar_TextChanged);
             // 
             // Grid
             // 
@@ -97,34 +102,35 @@ namespace Project_Youtube.project.view
             this.Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Grid.BackgroundColor = System.Drawing.Color.White;
             this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkViolet;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Grid.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.DarkViolet;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Grid.DefaultCellStyle = dataGridViewCellStyle7;
             this.Grid.Location = new System.Drawing.Point(15, 70);
             this.Grid.Name = "Grid";
             this.Grid.ReadOnly = true;
             this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Grid.Size = new System.Drawing.Size(626, 266);
             this.Grid.TabIndex = 0;
+            this.Grid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellDoubleClick);
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.txtTelefone);
             this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.txtEndereco);
+            this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.txtNome);
+            this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.pictureBox2);
             this.tabPage2.Controls.Add(this.BtnCancelar);
             this.tabPage2.Controls.Add(this.BtnExcluir);
             this.tabPage2.Controls.Add(this.BtnEditar);
             this.tabPage2.Controls.Add(this.BtnSalvar);
-            this.tabPage2.Controls.Add(this.txtEndereco);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.txtNome);
-            this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.ForeColor = System.Drawing.Color.DarkViolet;
             this.tabPage2.Location = new System.Drawing.Point(4, 26);
@@ -134,6 +140,24 @@ namespace Project_Youtube.project.view
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Dados Pessoais";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Location = new System.Drawing.Point(105, 96);
+            this.txtTelefone.Mask = "(##) # ####-####";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(128, 26);
+            this.txtTelefone.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 157);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 19);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Endereço.:";
             // 
             // txtEndereco
             // 
@@ -175,23 +199,19 @@ namespace Project_Youtube.project.view
             this.label2.TabIndex = 0;
             this.label2.Text = "Nome.:";
             // 
-            // label1
+            // BtnRefresh
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 157);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 19);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Endereço.:";
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.Location = new System.Drawing.Point(105, 96);
-            this.txtTelefone.Mask = "(##) # ####-####";
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(128, 26);
-            this.txtTelefone.TabIndex = 2;
+            this.BtnRefresh.BackColor = System.Drawing.Color.DarkViolet;
+            this.BtnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnRefresh.ForeColor = System.Drawing.Color.White;
+            this.BtnRefresh.Image = global::Project_Youtube.Properties.Resources.btn_refresh_24;
+            this.BtnRefresh.Location = new System.Drawing.Point(331, 19);
+            this.BtnRefresh.Name = "BtnRefresh";
+            this.BtnRefresh.Size = new System.Drawing.Size(36, 36);
+            this.BtnRefresh.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.BtnRefresh, "Atualizar tabela");
+            this.BtnRefresh.UseVisualStyleBackColor = false;
+            this.BtnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
             // 
             // pictureBox1
             // 
@@ -219,6 +239,7 @@ namespace Project_Youtube.project.view
             this.BtnNovo.TabIndex = 1;
             this.BtnNovo.Text = "  Novo";
             this.BtnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnNovo, "Novo registro");
             this.BtnNovo.UseVisualStyleBackColor = false;
             this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
             // 
@@ -244,6 +265,7 @@ namespace Project_Youtube.project.view
             this.BtnCancelar.TabIndex = 8;
             this.BtnCancelar.Text = "  Cancelar";
             this.BtnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnCancelar, "Cancelar ações");
             this.BtnCancelar.UseVisualStyleBackColor = false;
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
@@ -260,7 +282,9 @@ namespace Project_Youtube.project.view
             this.BtnExcluir.TabIndex = 7;
             this.BtnExcluir.Text = "   Excluir";
             this.BtnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnExcluir, "Remover dados");
             this.BtnExcluir.UseVisualStyleBackColor = false;
+            this.BtnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
             // 
             // BtnEditar
             // 
@@ -275,7 +299,9 @@ namespace Project_Youtube.project.view
             this.BtnEditar.TabIndex = 7;
             this.BtnEditar.Text = "   Editar";
             this.BtnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnEditar, "Atualizar dados");
             this.BtnEditar.UseVisualStyleBackColor = false;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // BtnSalvar
             // 
@@ -290,6 +316,7 @@ namespace Project_Youtube.project.view
             this.BtnSalvar.TabIndex = 6;
             this.BtnSalvar.Text = "   Salvar";
             this.BtnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnSalvar, "Salvar dados");
             this.BtnSalvar.UseVisualStyleBackColor = false;
             this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
@@ -335,5 +362,7 @@ namespace Project_Youtube.project.view
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MaskedTextBox txtTelefone;
+        private System.Windows.Forms.Button BtnRefresh;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

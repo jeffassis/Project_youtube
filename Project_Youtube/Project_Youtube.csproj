@@ -217,5 +217,8 @@
   <ItemGroup>
     <None Include="Resources\logo_Fornecedor_5121.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_refresh_24.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
