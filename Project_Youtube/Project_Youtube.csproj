@@ -85,7 +85,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="project.dao\FornecedorDAO.cs" />
+    <Compile Include="project.dao\ProdutoDAO.cs" />
     <Compile Include="project.model\Fornecedor.cs" />
+    <Compile Include="project.model\Produto.cs" />
     <Compile Include="project.view\FrmFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +99,12 @@
     </Compile>
     <Compile Include="project.view\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="project.view\FrmProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="project.view\FrmProduto.Designer.cs">
+      <DependentUpon>FrmProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="project.view\FrmUsuario.cs">
       <SubType>Form</SubType>
@@ -120,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="project.view\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="project.view\FrmProduto.resx">
+      <DependentUpon>FrmProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="project.view\FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
