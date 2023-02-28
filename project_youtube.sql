@@ -1,8 +1,4 @@
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
 --
 -- Estrutura da tabela `tb_user`
 --
@@ -32,7 +28,7 @@ COMMIT;
 --
 -- INSERIR USER `admin`
 --
-INSERT INTO `tb_user` (nome, username, senha, status, nivel) VALUES('Administrador', 'admin', '123', 'ATIVO', 3)
+INSERT INTO `tb_user` (`nome`, `username`, `senha`, `status`, `nivel`) VALUES('Administrador', 'admin', '123', 'ATIVO', 3);
 
 --
 -- Estrutura da tabela `tb_fornecedor`

@@ -46,7 +46,7 @@ namespace Project_Youtube.project.view
             this.BtnUsuario = new System.Windows.Forms.Button();
             this.Btn02 = new System.Windows.Forms.Button();
             this.panelSubMenuCadastros = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnProduto = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.BtnCadastros = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -254,7 +254,7 @@ namespace Project_Youtube.project.view
             // 
             // panelSubMenuCadastros
             // 
-            this.panelSubMenuCadastros.Controls.Add(this.button1);
+            this.panelSubMenuCadastros.Controls.Add(this.BtnProduto);
             this.panelSubMenuCadastros.Controls.Add(this.button2);
             this.panelSubMenuCadastros.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubMenuCadastros.Location = new System.Drawing.Point(0, 120);
@@ -262,20 +262,21 @@ namespace Project_Youtube.project.view
             this.panelSubMenuCadastros.Size = new System.Drawing.Size(150, 75);
             this.panelSubMenuCadastros.TabIndex = 6;
             // 
-            // button1
+            // BtnProduto
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::Project_Youtube.Properties.Resources.produto_24;
-            this.button1.Location = new System.Drawing.Point(0, 35);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 35);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "   Produto     ";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnProduto.FlatAppearance.BorderSize = 0;
+            this.BtnProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnProduto.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnProduto.Image = global::Project_Youtube.Properties.Resources.produto_24;
+            this.BtnProduto.Location = new System.Drawing.Point(0, 35);
+            this.BtnProduto.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnProduto.Name = "BtnProduto";
+            this.BtnProduto.Size = new System.Drawing.Size(150, 35);
+            this.BtnProduto.TabIndex = 3;
+            this.BtnProduto.Text = "   Produto     ";
+            this.BtnProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnProduto.UseVisualStyleBackColor = true;
+            this.BtnProduto.Click += new System.EventHandler(this.BtnProduto_Click);
             // 
             // button2
             // 
@@ -448,7 +449,7 @@ namespace Project_Youtube.project.view
         private System.Windows.Forms.Button BtnLogin;
         private System.Windows.Forms.Button BtnFecharChildForm;
         private System.Windows.Forms.Panel panelSubMenuCadastros;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnProduto;
         private System.Windows.Forms.Button button2;
     }
 }

@@ -33,7 +33,9 @@ namespace Project_Youtube
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabUsuario = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TxtPesquisar = new System.Windows.Forms.TextBox();
+            this.BtnNovo = new System.Windows.Forms.Button();
             this.Grid = new System.Windows.Forms.DataGridView();
             this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +44,11 @@ namespace Project_Youtube
             this.colNivel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSenha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.BtnCancelar = new System.Windows.Forms.Button();
+            this.BtnExcluir = new System.Windows.Forms.Button();
+            this.BtnEditar = new System.Windows.Forms.Button();
+            this.BtnSalvar = new System.Windows.Forms.Button();
             this.txtNivel = new System.Windows.Forms.NumericUpDown();
             this.CbStatus = new System.Windows.Forms.ComboBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
@@ -53,20 +60,13 @@ namespace Project_Youtube
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.BtnNovo = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.BtnCancelar = new System.Windows.Forms.Button();
-            this.BtnExcluir = new System.Windows.Forms.Button();
-            this.BtnEditar = new System.Windows.Forms.Button();
-            this.BtnSalvar = new System.Windows.Forms.Button();
             this.tabUsuario.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNivel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNivel)).BeginInit();
             this.SuspendLayout();
             // 
             // tabUsuario
@@ -74,7 +74,7 @@ namespace Project_Youtube
             this.tabUsuario.Controls.Add(this.tabPage1);
             this.tabUsuario.Controls.Add(this.tabPage2);
             this.tabUsuario.Font = new System.Drawing.Font("Calisto MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabUsuario.Location = new System.Drawing.Point(5, 82);
+            this.tabUsuario.Location = new System.Drawing.Point(8, 80);
             this.tabUsuario.Name = "tabUsuario";
             this.tabUsuario.SelectedIndex = 0;
             this.tabUsuario.Size = new System.Drawing.Size(665, 385);
@@ -95,6 +95,18 @@ namespace Project_Youtube
             this.tabPage1.Text = "Consulta";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::Project_Youtube.Properties.Resources.pesquisar_20;
+            this.pictureBox1.Location = new System.Drawing.Point(596, 26);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(45, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox1, "Pesquisar");
+            // 
             // TxtPesquisar
             // 
             this.TxtPesquisar.Font = new System.Drawing.Font("Calisto MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -103,6 +115,25 @@ namespace Project_Youtube
             this.TxtPesquisar.Size = new System.Drawing.Size(224, 25);
             this.TxtPesquisar.TabIndex = 2;
             this.TxtPesquisar.TextChanged += new System.EventHandler(this.TxtPesquisar_TextChanged);
+            // 
+            // BtnNovo
+            // 
+            this.BtnNovo.BackColor = System.Drawing.Color.DarkViolet;
+            this.BtnNovo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnNovo.FlatAppearance.BorderSize = 0;
+            this.BtnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnNovo.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnNovo.ForeColor = System.Drawing.Color.White;
+            this.BtnNovo.Image = global::Project_Youtube.Properties.Resources.btn_novo_24;
+            this.BtnNovo.Location = new System.Drawing.Point(15, 16);
+            this.BtnNovo.Name = "BtnNovo";
+            this.BtnNovo.Size = new System.Drawing.Size(95, 40);
+            this.BtnNovo.TabIndex = 1;
+            this.BtnNovo.Text = "  Novo";
+            this.BtnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnNovo, "Novo registro");
+            this.BtnNovo.UseVisualStyleBackColor = false;
+            this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
             // 
             // Grid
             // 
@@ -207,6 +238,82 @@ namespace Project_Youtube
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Dados Pessoais";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Project_Youtube.Properties.Resources.icone_usuario_128;
+            this.pictureBox2.Location = new System.Drawing.Point(497, 49);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(125, 131);
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            // 
+            // BtnCancelar
+            // 
+            this.BtnCancelar.BackColor = System.Drawing.Color.DarkViolet;
+            this.BtnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCancelar.ForeColor = System.Drawing.Color.White;
+            this.BtnCancelar.Image = global::Project_Youtube.Properties.Resources.btn_cancelar_24;
+            this.BtnCancelar.Location = new System.Drawing.Point(482, 239);
+            this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Size = new System.Drawing.Size(140, 55);
+            this.BtnCancelar.TabIndex = 8;
+            this.BtnCancelar.Text = "  Cancelar";
+            this.BtnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnCancelar, "Remover dados");
+            this.BtnCancelar.UseVisualStyleBackColor = false;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
+            // 
+            // BtnExcluir
+            // 
+            this.BtnExcluir.BackColor = System.Drawing.Color.DarkViolet;
+            this.BtnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnExcluir.Enabled = false;
+            this.BtnExcluir.ForeColor = System.Drawing.Color.White;
+            this.BtnExcluir.Image = global::Project_Youtube.Properties.Resources.btn_excluir_24;
+            this.BtnExcluir.Location = new System.Drawing.Point(326, 239);
+            this.BtnExcluir.Name = "BtnExcluir";
+            this.BtnExcluir.Size = new System.Drawing.Size(140, 55);
+            this.BtnExcluir.TabIndex = 7;
+            this.BtnExcluir.Text = "   Excluir";
+            this.BtnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnExcluir, "Remover dados");
+            this.BtnExcluir.UseVisualStyleBackColor = false;
+            this.BtnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
+            // 
+            // BtnEditar
+            // 
+            this.BtnEditar.BackColor = System.Drawing.Color.DarkViolet;
+            this.BtnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnEditar.Enabled = false;
+            this.BtnEditar.ForeColor = System.Drawing.Color.White;
+            this.BtnEditar.Image = global::Project_Youtube.Properties.Resources.btn_editar_24;
+            this.BtnEditar.Location = new System.Drawing.Point(171, 239);
+            this.BtnEditar.Name = "BtnEditar";
+            this.BtnEditar.Size = new System.Drawing.Size(140, 55);
+            this.BtnEditar.TabIndex = 7;
+            this.BtnEditar.Text = "   Editar";
+            this.BtnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnEditar, "Editar dados");
+            this.BtnEditar.UseVisualStyleBackColor = false;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
+            // 
+            // BtnSalvar
+            // 
+            this.BtnSalvar.BackColor = System.Drawing.Color.DarkViolet;
+            this.BtnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSalvar.Enabled = false;
+            this.BtnSalvar.ForeColor = System.Drawing.Color.White;
+            this.BtnSalvar.Image = global::Project_Youtube.Properties.Resources.btn_salvar_24;
+            this.BtnSalvar.Location = new System.Drawing.Point(15, 239);
+            this.BtnSalvar.Name = "BtnSalvar";
+            this.BtnSalvar.Size = new System.Drawing.Size(140, 55);
+            this.BtnSalvar.TabIndex = 6;
+            this.BtnSalvar.Text = "   Salvar";
+            this.BtnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnSalvar, "Salvar dados");
+            this.BtnSalvar.UseVisualStyleBackColor = false;
+            this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // txtNivel
             // 
@@ -314,113 +421,6 @@ namespace Project_Youtube
             this.label2.TabIndex = 0;
             this.label2.Text = "Nome.:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::Project_Youtube.Properties.Resources.pesquisar_20;
-            this.pictureBox1.Location = new System.Drawing.Point(596, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox1, "Pesquisar");
-            // 
-            // BtnNovo
-            // 
-            this.BtnNovo.BackColor = System.Drawing.Color.DarkViolet;
-            this.BtnNovo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnNovo.FlatAppearance.BorderSize = 0;
-            this.BtnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnNovo.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnNovo.ForeColor = System.Drawing.Color.White;
-            this.BtnNovo.Image = global::Project_Youtube.Properties.Resources.btn_novo_24;
-            this.BtnNovo.Location = new System.Drawing.Point(15, 16);
-            this.BtnNovo.Name = "BtnNovo";
-            this.BtnNovo.Size = new System.Drawing.Size(95, 40);
-            this.BtnNovo.TabIndex = 1;
-            this.BtnNovo.Text = "  Novo";
-            this.BtnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.BtnNovo, "Novo registro");
-            this.BtnNovo.UseVisualStyleBackColor = false;
-            this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Project_Youtube.Properties.Resources.icone_usuario_128;
-            this.pictureBox2.Location = new System.Drawing.Point(497, 49);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(125, 131);
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
-            // 
-            // BtnCancelar
-            // 
-            this.BtnCancelar.BackColor = System.Drawing.Color.DarkViolet;
-            this.BtnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnCancelar.ForeColor = System.Drawing.Color.White;
-            this.BtnCancelar.Image = global::Project_Youtube.Properties.Resources.btn_cancelar_24;
-            this.BtnCancelar.Location = new System.Drawing.Point(482, 239);
-            this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(140, 55);
-            this.BtnCancelar.TabIndex = 8;
-            this.BtnCancelar.Text = "  Cancelar";
-            this.BtnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.BtnCancelar, "Remover dados");
-            this.BtnCancelar.UseVisualStyleBackColor = false;
-            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
-            // 
-            // BtnExcluir
-            // 
-            this.BtnExcluir.BackColor = System.Drawing.Color.DarkViolet;
-            this.BtnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnExcluir.Enabled = false;
-            this.BtnExcluir.ForeColor = System.Drawing.Color.White;
-            this.BtnExcluir.Image = global::Project_Youtube.Properties.Resources.btn_excluir_24;
-            this.BtnExcluir.Location = new System.Drawing.Point(326, 239);
-            this.BtnExcluir.Name = "BtnExcluir";
-            this.BtnExcluir.Size = new System.Drawing.Size(140, 55);
-            this.BtnExcluir.TabIndex = 7;
-            this.BtnExcluir.Text = "   Excluir";
-            this.BtnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.BtnExcluir, "Remover dados");
-            this.BtnExcluir.UseVisualStyleBackColor = false;
-            this.BtnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
-            // 
-            // BtnEditar
-            // 
-            this.BtnEditar.BackColor = System.Drawing.Color.DarkViolet;
-            this.BtnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnEditar.Enabled = false;
-            this.BtnEditar.ForeColor = System.Drawing.Color.White;
-            this.BtnEditar.Image = global::Project_Youtube.Properties.Resources.btn_editar_24;
-            this.BtnEditar.Location = new System.Drawing.Point(171, 239);
-            this.BtnEditar.Name = "BtnEditar";
-            this.BtnEditar.Size = new System.Drawing.Size(140, 55);
-            this.BtnEditar.TabIndex = 7;
-            this.BtnEditar.Text = "   Editar";
-            this.BtnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.BtnEditar, "Editar dados");
-            this.BtnEditar.UseVisualStyleBackColor = false;
-            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
-            // 
-            // BtnSalvar
-            // 
-            this.BtnSalvar.BackColor = System.Drawing.Color.DarkViolet;
-            this.BtnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnSalvar.Enabled = false;
-            this.BtnSalvar.ForeColor = System.Drawing.Color.White;
-            this.BtnSalvar.Image = global::Project_Youtube.Properties.Resources.btn_salvar_24;
-            this.BtnSalvar.Location = new System.Drawing.Point(15, 239);
-            this.BtnSalvar.Name = "BtnSalvar";
-            this.BtnSalvar.Size = new System.Drawing.Size(140, 55);
-            this.BtnSalvar.TabIndex = 6;
-            this.BtnSalvar.Text = "   Salvar";
-            this.BtnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.BtnSalvar, "Salvar dados");
-            this.BtnSalvar.UseVisualStyleBackColor = false;
-            this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
-            // 
             // FrmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -437,12 +437,12 @@ namespace Project_Youtube
             this.tabUsuario.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNivel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNivel)).EndInit();
             this.ResumeLayout(false);
 
         }

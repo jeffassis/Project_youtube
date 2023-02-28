@@ -179,5 +179,11 @@ namespace Project_Youtube.project.view
             FrmFornecedor form = new FrmFornecedor();
             AbreForm(1, form, sender);
         }
+
+        private void BtnProduto_Click(object sender, EventArgs e)
+        {
+            FrmProduto form = new FrmProduto();
+            AbreForm(1, form, sender);
+        }
     }
 }
