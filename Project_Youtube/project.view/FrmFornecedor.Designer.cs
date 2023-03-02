@@ -245,7 +245,7 @@ namespace Project_Youtube.project.view
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Project_Youtube.Properties.Resources.logo_Fornecedor_5121;
+            this.pictureBox2.Image = global::Project_Youtube.Properties.Resources.logo_Fornecedor_512;
             this.pictureBox2.Location = new System.Drawing.Point(497, 49);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(125, 131);
