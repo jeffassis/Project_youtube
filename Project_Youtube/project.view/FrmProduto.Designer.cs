@@ -29,36 +29,38 @@ namespace Project_Youtube.project.view
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabProduto = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Grid = new System.Windows.Forms.DataGridView();
             this.TxtPesquisar = new System.Windows.Forms.TextBox();
-            this.BtnNovo = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.BtnCancelar = new System.Windows.Forms.Button();
-            this.BtnExcluir = new System.Windows.Forms.Button();
-            this.BtnEditar = new System.Windows.Forms.Button();
-            this.BtnSalvar = new System.Windows.Forms.Button();
+            this.CbFornecedor = new System.Windows.Forms.ComboBox();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.txtVenda = new System.Windows.Forms.TextBox();
+            this.txtEstoque = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.BtnRefresh = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtEstoque = new System.Windows.Forms.TextBox();
-            this.txtVenda = new System.Windows.Forms.TextBox();
-            this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.CbFornecedor = new System.Windows.Forms.ComboBox();
-            this.Grid = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BtnNovo = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.BtnCancelar = new System.Windows.Forms.Button();
+            this.BtnExcluir = new System.Windows.Forms.Button();
+            this.BtnEditar = new System.Windows.Forms.Button();
+            this.BtnSalvar = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabProduto.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabProduto
@@ -88,16 +90,29 @@ namespace Project_Youtube.project.view
             this.tabPage1.Text = "Consulta";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // Grid
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::Project_Youtube.Properties.Resources.pesquisar_20;
-            this.pictureBox1.Location = new System.Drawing.Point(596, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.Grid.AllowUserToAddRows = false;
+            this.Grid.AllowUserToDeleteRows = false;
+            this.Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Grid.BackgroundColor = System.Drawing.Color.White;
+            this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DarkViolet;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Grid.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Grid.Location = new System.Drawing.Point(15, 77);
+            this.Grid.Name = "Grid";
+            this.Grid.ReadOnly = true;
+            this.Grid.RowHeadersVisible = false;
+            this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Grid.Size = new System.Drawing.Size(626, 266);
+            this.Grid.TabIndex = 6;
+            this.Grid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellDoubleClick);
             // 
             // TxtPesquisar
             // 
@@ -106,22 +121,7 @@ namespace Project_Youtube.project.view
             this.TxtPesquisar.Name = "TxtPesquisar";
             this.TxtPesquisar.Size = new System.Drawing.Size(224, 25);
             this.TxtPesquisar.TabIndex = 2;
-            // 
-            // BtnNovo
-            // 
-            this.BtnNovo.BackColor = System.Drawing.Color.DarkViolet;
-            this.BtnNovo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnNovo.FlatAppearance.BorderSize = 0;
-            this.BtnNovo.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnNovo.ForeColor = System.Drawing.Color.White;
-            this.BtnNovo.Image = global::Project_Youtube.Properties.Resources.btn_novo_24;
-            this.BtnNovo.Location = new System.Drawing.Point(15, 16);
-            this.BtnNovo.Name = "BtnNovo";
-            this.BtnNovo.Size = new System.Drawing.Size(95, 40);
-            this.BtnNovo.TabIndex = 1;
-            this.BtnNovo.Text = "  Novo";
-            this.BtnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnNovo.UseVisualStyleBackColor = false;
+            this.TxtPesquisar.TextChanged += new System.EventHandler(this.TxtPesquisar_TextChanged);
             // 
             // tabPage2
             // 
@@ -150,73 +150,52 @@ namespace Project_Youtube.project.view
             this.tabPage2.Text = "Dados Pessoais";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // pictureBox2
+            // CbFornecedor
             // 
-            this.pictureBox2.Image = global::Project_Youtube.Properties.Resources.icone_usuario_128;
-            this.pictureBox2.Location = new System.Drawing.Point(462, 42);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(135, 135);
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
+            this.CbFornecedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbFornecedor.Enabled = false;
+            this.CbFornecedor.FormattingEnabled = true;
+            this.CbFornecedor.Location = new System.Drawing.Point(115, 68);
+            this.CbFornecedor.Name = "CbFornecedor";
+            this.CbFornecedor.Size = new System.Drawing.Size(288, 27);
+            this.CbFornecedor.TabIndex = 14;
             // 
-            // BtnCancelar
+            // txtDescricao
             // 
-            this.BtnCancelar.BackColor = System.Drawing.Color.DarkViolet;
-            this.BtnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnCancelar.ForeColor = System.Drawing.Color.White;
-            this.BtnCancelar.Image = global::Project_Youtube.Properties.Resources.btn_cancelar_24;
-            this.BtnCancelar.Location = new System.Drawing.Point(482, 239);
-            this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(140, 55);
-            this.BtnCancelar.TabIndex = 8;
-            this.BtnCancelar.Text = "  Cancelar";
-            this.BtnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnCancelar.UseVisualStyleBackColor = false;
+            this.txtDescricao.Enabled = false;
+            this.txtDescricao.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescricao.Location = new System.Drawing.Point(115, 171);
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(288, 26);
+            this.txtDescricao.TabIndex = 13;
             // 
-            // BtnExcluir
+            // txtVenda
             // 
-            this.BtnExcluir.BackColor = System.Drawing.Color.DarkViolet;
-            this.BtnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnExcluir.Enabled = false;
-            this.BtnExcluir.ForeColor = System.Drawing.Color.White;
-            this.BtnExcluir.Image = global::Project_Youtube.Properties.Resources.btn_excluir_24;
-            this.BtnExcluir.Location = new System.Drawing.Point(326, 239);
-            this.BtnExcluir.Name = "BtnExcluir";
-            this.BtnExcluir.Size = new System.Drawing.Size(140, 55);
-            this.BtnExcluir.TabIndex = 7;
-            this.BtnExcluir.Text = "   Excluir";
-            this.BtnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnExcluir.UseVisualStyleBackColor = false;
+            this.txtVenda.Enabled = false;
+            this.txtVenda.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVenda.Location = new System.Drawing.Point(298, 118);
+            this.txtVenda.Name = "txtVenda";
+            this.txtVenda.Size = new System.Drawing.Size(105, 26);
+            this.txtVenda.TabIndex = 12;
             // 
-            // BtnEditar
+            // txtEstoque
             // 
-            this.BtnEditar.BackColor = System.Drawing.Color.DarkViolet;
-            this.BtnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnEditar.Enabled = false;
-            this.BtnEditar.ForeColor = System.Drawing.Color.White;
-            this.BtnEditar.Image = global::Project_Youtube.Properties.Resources.btn_editar_24;
-            this.BtnEditar.Location = new System.Drawing.Point(171, 239);
-            this.BtnEditar.Name = "BtnEditar";
-            this.BtnEditar.Size = new System.Drawing.Size(140, 55);
-            this.BtnEditar.TabIndex = 7;
-            this.BtnEditar.Text = "   Editar";
-            this.BtnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnEditar.UseVisualStyleBackColor = false;
+            this.txtEstoque.Enabled = false;
+            this.txtEstoque.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstoque.Location = new System.Drawing.Point(115, 118);
+            this.txtEstoque.Name = "txtEstoque";
+            this.txtEstoque.Size = new System.Drawing.Size(108, 26);
+            this.txtEstoque.TabIndex = 11;
             // 
-            // BtnSalvar
+            // label1
             // 
-            this.BtnSalvar.BackColor = System.Drawing.Color.DarkViolet;
-            this.BtnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnSalvar.Enabled = false;
-            this.BtnSalvar.ForeColor = System.Drawing.Color.White;
-            this.BtnSalvar.Image = global::Project_Youtube.Properties.Resources.btn_salvar_24;
-            this.BtnSalvar.Location = new System.Drawing.Point(15, 239);
-            this.BtnSalvar.Name = "BtnSalvar";
-            this.BtnSalvar.Size = new System.Drawing.Size(140, 55);
-            this.BtnSalvar.TabIndex = 6;
-            this.BtnSalvar.Text = "   Salvar";
-            this.BtnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnSalvar.UseVisualStyleBackColor = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(229, 121);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 19);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Venda.:";
             // 
             // label6
             // 
@@ -277,75 +256,115 @@ namespace Project_Youtube.project.view
             this.BtnRefresh.Name = "BtnRefresh";
             this.BtnRefresh.Size = new System.Drawing.Size(36, 36);
             this.BtnRefresh.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.BtnRefresh, "Atualizar tabela");
             this.BtnRefresh.UseVisualStyleBackColor = false;
             this.BtnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
             // 
-            // label1
+            // pictureBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(229, 121);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 19);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Venda.:";
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::Project_Youtube.Properties.Resources.pesquisar_20;
+            this.pictureBox1.Location = new System.Drawing.Point(596, 26);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(45, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
-            // txtEstoque
+            // BtnNovo
             // 
-            this.txtEstoque.Enabled = false;
-            this.txtEstoque.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstoque.Location = new System.Drawing.Point(115, 118);
-            this.txtEstoque.Name = "txtEstoque";
-            this.txtEstoque.Size = new System.Drawing.Size(108, 26);
-            this.txtEstoque.TabIndex = 11;
+            this.BtnNovo.BackColor = System.Drawing.Color.DarkViolet;
+            this.BtnNovo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnNovo.FlatAppearance.BorderSize = 0;
+            this.BtnNovo.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnNovo.ForeColor = System.Drawing.Color.White;
+            this.BtnNovo.Image = global::Project_Youtube.Properties.Resources.btn_novo_24;
+            this.BtnNovo.Location = new System.Drawing.Point(15, 16);
+            this.BtnNovo.Name = "BtnNovo";
+            this.BtnNovo.Size = new System.Drawing.Size(95, 40);
+            this.BtnNovo.TabIndex = 1;
+            this.BtnNovo.Text = "  Novo";
+            this.BtnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnNovo, "Novo registro");
+            this.BtnNovo.UseVisualStyleBackColor = false;
+            this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
             // 
-            // txtVenda
+            // pictureBox2
             // 
-            this.txtVenda.Enabled = false;
-            this.txtVenda.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVenda.Location = new System.Drawing.Point(298, 118);
-            this.txtVenda.Name = "txtVenda";
-            this.txtVenda.Size = new System.Drawing.Size(105, 26);
-            this.txtVenda.TabIndex = 12;
+            this.pictureBox2.Image = global::Project_Youtube.Properties.Resources.logo_produto_512;
+            this.pictureBox2.Location = new System.Drawing.Point(445, 27);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(154, 160);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
             // 
-            // txtDescricao
+            // BtnCancelar
             // 
-            this.txtDescricao.Enabled = false;
-            this.txtDescricao.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescricao.Location = new System.Drawing.Point(115, 171);
-            this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(288, 26);
-            this.txtDescricao.TabIndex = 13;
+            this.BtnCancelar.BackColor = System.Drawing.Color.DarkViolet;
+            this.BtnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCancelar.ForeColor = System.Drawing.Color.White;
+            this.BtnCancelar.Image = global::Project_Youtube.Properties.Resources.btn_cancelar_24;
+            this.BtnCancelar.Location = new System.Drawing.Point(482, 239);
+            this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Size = new System.Drawing.Size(140, 55);
+            this.BtnCancelar.TabIndex = 8;
+            this.BtnCancelar.Text = "  Cancelar";
+            this.BtnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnCancelar, "Cancelar ações");
+            this.BtnCancelar.UseVisualStyleBackColor = false;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
-            // CbFornecedor
+            // BtnExcluir
             // 
-            this.CbFornecedor.FormattingEnabled = true;
-            this.CbFornecedor.Location = new System.Drawing.Point(115, 68);
-            this.CbFornecedor.Name = "CbFornecedor";
-            this.CbFornecedor.Size = new System.Drawing.Size(288, 27);
-            this.CbFornecedor.TabIndex = 14;
+            this.BtnExcluir.BackColor = System.Drawing.Color.DarkViolet;
+            this.BtnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnExcluir.Enabled = false;
+            this.BtnExcluir.ForeColor = System.Drawing.Color.White;
+            this.BtnExcluir.Image = global::Project_Youtube.Properties.Resources.btn_excluir_24;
+            this.BtnExcluir.Location = new System.Drawing.Point(326, 239);
+            this.BtnExcluir.Name = "BtnExcluir";
+            this.BtnExcluir.Size = new System.Drawing.Size(140, 55);
+            this.BtnExcluir.TabIndex = 7;
+            this.BtnExcluir.Text = "   Excluir";
+            this.BtnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnExcluir, "Remover dados");
+            this.BtnExcluir.UseVisualStyleBackColor = false;
+            this.BtnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
             // 
-            // Grid
+            // BtnEditar
             // 
-            this.Grid.AllowUserToAddRows = false;
-            this.Grid.AllowUserToDeleteRows = false;
-            this.Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.Grid.BackgroundColor = System.Drawing.Color.White;
-            this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkViolet;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Grid.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Grid.Location = new System.Drawing.Point(15, 77);
-            this.Grid.Name = "Grid";
-            this.Grid.ReadOnly = true;
-            this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Grid.Size = new System.Drawing.Size(626, 266);
-            this.Grid.TabIndex = 6;
+            this.BtnEditar.BackColor = System.Drawing.Color.DarkViolet;
+            this.BtnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnEditar.Enabled = false;
+            this.BtnEditar.ForeColor = System.Drawing.Color.White;
+            this.BtnEditar.Image = global::Project_Youtube.Properties.Resources.btn_editar_24;
+            this.BtnEditar.Location = new System.Drawing.Point(171, 239);
+            this.BtnEditar.Name = "BtnEditar";
+            this.BtnEditar.Size = new System.Drawing.Size(140, 55);
+            this.BtnEditar.TabIndex = 7;
+            this.BtnEditar.Text = "   Editar";
+            this.BtnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnEditar, "Atualizar dados");
+            this.BtnEditar.UseVisualStyleBackColor = false;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
+            // 
+            // BtnSalvar
+            // 
+            this.BtnSalvar.BackColor = System.Drawing.Color.DarkViolet;
+            this.BtnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSalvar.Enabled = false;
+            this.BtnSalvar.ForeColor = System.Drawing.Color.White;
+            this.BtnSalvar.Image = global::Project_Youtube.Properties.Resources.btn_salvar_24;
+            this.BtnSalvar.Location = new System.Drawing.Point(15, 239);
+            this.BtnSalvar.Name = "BtnSalvar";
+            this.BtnSalvar.Size = new System.Drawing.Size(140, 55);
+            this.BtnSalvar.TabIndex = 6;
+            this.BtnSalvar.Text = "   Salvar";
+            this.BtnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnSalvar, "Salvar dados");
+            this.BtnSalvar.UseVisualStyleBackColor = false;
+            this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // FrmProduto
             // 
@@ -360,11 +379,11 @@ namespace Project_Youtube.project.view
             this.tabProduto.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -394,5 +413,6 @@ namespace Project_Youtube.project.view
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.ComboBox CbFornecedor;
         private System.Windows.Forms.DataGridView Grid;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

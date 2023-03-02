@@ -149,7 +149,7 @@ namespace Project_Youtube.project.view
 
         private void BtnExcluir_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Confirma a exclusão?", "Excluir?", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Confirma a exclusão?", "Excluir?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
                 FornecedorDAO dao = new FornecedorDAO();

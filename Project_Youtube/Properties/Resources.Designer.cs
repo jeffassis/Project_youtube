@@ -183,9 +183,9 @@ namespace Project_Youtube.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo_Fornecedor_5121 {
+        internal static System.Drawing.Bitmap logo_produto_512 {
             get {
-                object obj = ResourceManager.GetObject("logo_Fornecedor_5121", resourceCulture);
+                object obj = ResourceManager.GetObject("logo_produto_512", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

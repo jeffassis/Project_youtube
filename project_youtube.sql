@@ -53,3 +53,31 @@ ALTER TABLE `tb_fornecedor`
 ALTER TABLE `tb_fornecedor`
   MODIFY `id_fornecedor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 COMMIT;
+
+--
+-- Estrutura da tabela `tb_produto`
+--
+
+CREATE TABLE `tb_produto` (
+  `id_produto` int(11) NOT NULL,
+  `nome` varchar(80) NOT NULL,
+  `descricao` varchar(200) NOT NULL,
+  `estoque` int(11) NOT NULL,
+  `valor_venda` decimal(10,2) NOT NULL,
+  `valor_compra` decimal(10,2) NOT NULL,
+  `data` date NOT NULL,
+  `fornecedor_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Indices para tabela `tb_produto`
+--
+ALTER TABLE `tb_produto`
+  ADD PRIMARY KEY (`id_produto`);
+
+--
+-- AUTO_INCREMENT de tabela `tb_produto`
+--
+ALTER TABLE `tb_produto`
+  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
