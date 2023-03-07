@@ -162,7 +162,7 @@ namespace Project_Youtube.project.view
             // Verfificar se o campo Venda esta vazia
             if (txtVenda.Text.ToString().Trim() == "")
             {
-                MessageBox.Show("Preencha o campo NOME!", "Campo nome está vazio!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Preencha o campo VENDA!", "Campo venda está vazio!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtVenda.Focus();
                 return;
             }
@@ -174,7 +174,7 @@ namespace Project_Youtube.project.view
                 FornecedorId = int.Parse(CbFornecedor.SelectedValue.ToString()),
                 ValorVenda = decimal.Parse(txtVenda.Text)
             };
-            ProdutoDAO dao = new ProdutoDAO();
+            ProdutoDAO dao = new ProdutoDAO();          
             // Verificar se o nome ja existe
             DataTable dt = dao.VerificarProduto(txtNome.Text);
             if (dt.Rows.Count > 0)
@@ -203,6 +203,8 @@ namespace Project_Youtube.project.view
             Habilitar();
             BtnEditar.Enabled = true;
             BtnExcluir.Enabled = true;
+
+            produtoAntigo = Grid.CurrentRow.Cells[1].Value.ToString();
         }
 
         private void BtnExcluir_Click(object sender, EventArgs e)
@@ -211,8 +213,7 @@ namespace Project_Youtube.project.view
             if (result == DialogResult.Yes)
             {
                 ProdutoDAO dao = new ProdutoDAO();
-                dao.ExcluirProduto(idSelecionado);
-                Grid.Rows.Remove(Grid.CurrentRow);
+                dao.ExcluirProduto(idSelecionado);                
             }
             Desabilitar();
             LimparCampos();
@@ -231,7 +232,7 @@ namespace Project_Youtube.project.view
             // Verfificar se o campo Venda esta vazia
             if (txtVenda.Text.ToString().Trim() == "")
             {
-                MessageBox.Show("Preencha o campo NOME!", "Campo nome está vazio!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Preencha o campo VENDA!", "Campo venda está vazio!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtVenda.Focus();
                 return;
             }

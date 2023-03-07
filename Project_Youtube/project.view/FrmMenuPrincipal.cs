@@ -83,6 +83,7 @@ namespace Project_Youtube.project.view
         {
             panelSubMenuLogin.Visible = false;
             panelSubMenuCadastros.Visible = false;
+            panelSubMenuMovimentacao.Visible = false;
         }
 
         private void HideSubMenu()
@@ -91,6 +92,8 @@ namespace Project_Youtube.project.view
                 panelSubMenuLogin.Visible = false;
             if (panelSubMenuCadastros.Visible == true)
                 panelSubMenuCadastros.Visible = false;
+            if (panelSubMenuMovimentacao.Visible == true)
+                panelSubMenuMovimentacao.Visible = false;
         }
 
         private void ShowSubMenu(Panel subMenu)
@@ -114,6 +117,11 @@ namespace Project_Youtube.project.view
         private void BtnCadastros_Click(object sender, EventArgs e)
         {
             ShowSubMenu(panelSubMenuCadastros);
+        }
+
+        private void BtnMovimentacao_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(panelSubMenuMovimentacao);
         }
 
         private void BtnFechar_Click(object sender, EventArgs e)
@@ -174,7 +182,7 @@ namespace Project_Youtube.project.view
             login.ShowDialog();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void BtnFornecedor_Click(object sender, EventArgs e)
         {
             FrmFornecedor form = new FrmFornecedor();
             AbreForm(1, form, sender);
@@ -183,6 +191,18 @@ namespace Project_Youtube.project.view
         private void BtnProduto_Click(object sender, EventArgs e)
         {
             FrmProduto form = new FrmProduto();
+            AbreForm(1, form, sender);
+        }
+
+        private void BtnCompra_Click(object sender, EventArgs e)
+        {
+            FrmCompra form = new FrmCompra();
+            AbreForm(1, form, sender);
+        }
+
+        private void BtnVenda_Click(object sender, EventArgs e)
+        {
+            FrmVenda form = new FrmVenda();
             AbreForm(1, form, sender);
         }
     }

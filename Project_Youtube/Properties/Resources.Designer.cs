@@ -123,6 +123,16 @@ namespace Project_Youtube.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btn_pesquisar_24 {
+            get {
+                object obj = ResourceManager.GetObject("btn_pesquisar_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btn_refresh_24 {
             get {
                 object obj = ResourceManager.GetObject("btn_refresh_24", resourceCulture);
@@ -136,6 +146,26 @@ namespace Project_Youtube.Properties {
         internal static System.Drawing.Bitmap btn_salvar_24 {
             get {
                 object obj = ResourceManager.GetObject("btn_salvar_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap compra_24 {
+            get {
+                object obj = ResourceManager.GetObject("compra_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap entrada_saida_24 {
+            get {
+                object obj = ResourceManager.GetObject("entrada_saida_24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,6 +223,16 @@ namespace Project_Youtube.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo_venda_512 {
+            get {
+                object obj = ResourceManager.GetObject("logo_venda_512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logoff_24 {
             get {
                 object obj = ResourceManager.GetObject("logoff_24", resourceCulture);
@@ -206,6 +246,16 @@ namespace Project_Youtube.Properties {
         internal static System.Drawing.Bitmap logon_24 {
             get {
                 object obj = ResourceManager.GetObject("logon_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menu_movimentacao_32 {
+            get {
+                object obj = ResourceManager.GetObject("menu_movimentacao_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -276,6 +326,16 @@ namespace Project_Youtube.Properties {
         internal static System.Drawing.Bitmap username_20 {
             get {
                 object obj = ResourceManager.GetObject("username_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap venda_24 {
+            get {
+                object obj = ResourceManager.GetObject("venda_24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
